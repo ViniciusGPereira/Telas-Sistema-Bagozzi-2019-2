@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
 
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/fontawesome.min.js"></script>
 </head>
 <body>
     <div class="row menu  flex content-between">
@@ -25,72 +28,388 @@
     <div class="row flex content-center content-panel ">
         <div class="col-md-8 ">
             <div class="row flex">
-                <div class="col-md-2 silver">
+                <div class="col-md-2 silver" id="bnt_professor" >
                     <h3>Professores</h3>
                 </div>
-                <div class="col-md-2 ">
+                <div class="col-md-2 " id="bnt_aluno">
                     <h3>Alunos</h3>
                 </div>
             </div>
             <div class="row silver">
-                <div class="content-professor full-width">
+                <div class="content-professor full-width" id="content_profesor">
                     <div class="superior-professor full-width flex content-between ">
                         <div class="titulo-professor">
-                            <h3>Professores</h3>
+                            <h3>Lista de Professores</h3>
                         </div>
                         <div class="adicionar-professor">
-                            +
+                            <a href="#" data-toggle="modal" data-target="#adiciona_professor"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="silver content-table">
+                        <table class="table">
+                            <thead>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Opções</th>
+                            </thead>
+                            <tbody>
+                                <!-- FOREACH COM OS REGISTRO DE PROFESSORES -->
+                                <tr>
+                                    <td>Exemplo</td>
+                                    <td>000.000.000.00</td>
+                                    <td>00/00/0000</td>
+                                    <td>Ativo</td>
+                                    <td><a href="" data-toggle="modal" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Exemplo</td>
+                                    <td>000.000.000.00</td>
+                                    <td>00/00/0000</td>
+                                    <td>Ativo</td>
+                                    <td><a href="" data-toggle="modal" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Exemplo</td>
+                                    <td>000.000.000.00</td>
+                                    <td>00/00/0000</td>
+                                    <td>Ativo</td>
+                                    <td><a href="" data-toggle="modal" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Exemplo</td>
+                                    <td>000.000.000.00</td>
+                                    <td>00/00/0000</td>
+                                    <td>Ativo</td>
+                                    <td><a href="" data-toggle="modal" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="content-aluno full-width" id="content_aluno">
+                    <div class="content-professor full-width" id="content_aluno">
+                        <div class="superior-professor full-width flex content-between ">
+                            <div class="titulo-professor">
+                                <h3>Lista de Alunos</h3>
+                            </div>
+                            <div class="adicionar-professor">
+                                <a href="#" data-toggle="modal" data-target="#adiciona_aluno"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="silver content-table">
+                            <table class="table">
+                                <thead>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                    <th>Opções</th>
+                                </thead>
+                                <tbody>
+                                    <!-- FOREACH COM OS REGISTRO DE PROFESSORES -->
+                                    <tr>
+                                        <td>Exemplo</td>
+                                        <td>000.000.000.00</td>
+                                        <td>00/00/0000</td>
+                                        <td>Ativo</td>
+                                        <td><a href="" data-toggle="modal" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Exemplo</td>
+                                        <td>000.000.000.00</td>
+                                        <td>00/00/0000</td>
+                                        <td>Ativo</td>
+                                        <td><a href="" data-toggle="modal" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Exemplo</td>
+                                        <td>000.000.000.00</td>
+                                        <td>00/00/0000</td>
+                                        <td>Ativo</td>
+                                        <td><a href="" data-toggle="modal" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Exemplo</td>
+                                        <td>000.000.000.00</td>
+                                        <td>00/00/0000</td>
+                                        <td>Ativo</td>
+                                        <td><a href="" data-toggle="modal" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="content-aluno">
+            </div>
 
-                </div>
-            </div>
-            <div class="row silver content-table">
-                <table class="table">
-                    <thead>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Data</th>
-                        <th>Status</th>
-                        <th>Opções</th>
-                    </thead>
-                    <tbody>
-                        <!-- FOREACH COM RESULTADOS -->
-                        <tr>
-                            <td>Exemplo</td>
-                            <td>000.000.000.00</td>
-                            <td>00/00/0000</td>
-                            <td>Ativo</td>
-                            <td>Editar</td>
-                        </tr>
-                        <tr>
-                            <td>Exemplo</td>
-                            <td>000.000.000.00</td>
-                            <td>00/00/0000</td>
-                            <td>Ativo</td>
-                            <td>Editar</td>
-                        </tr>
-                        <tr>
-                            <td>Exemplo</td>
-                            <td>000.000.000.00</td>
-                            <td>00/00/0000</td>
-                            <td>Ativo</td>
-                            <td>Editar</td>
-                        </tr>
-                        <tr>
-                            <td>Exemplo</td>
-                            <td>000.000.000.00</td>
-                            <td>00/00/0000</td>
-                            <td>Ativo</td>
-                            <td>Editar</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
 </body>
 </html>
+
+<!-- Modal - Adicionar Professor -->
+<div class="modal fade" id="adiciona_professor" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title">Adicionar Professor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="" method="post" id="form_cadastraProfessor">
+                        <div class="form-group">
+                          <label for="nome">Nome</label>
+                          <input type="text" required name="nome" id="nome" class="form-control" placeholder="Ex: joão da silva" aria-describedby="helpId">
+                          <small id="helpId" class="text-muted">Nome completo.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="cpf">CPF</label>
+                          <input type="text" required name="cpf" id="cpf" class="form-control" placeholder="Ex: xxx.xxx.xxx-xx" aria-describedby="helpId">
+                          <small id="helpId" class="text-muted">CPF sem digítos.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="endereco">Endereço</label>
+                          <input type="text" required name="endereco" id="endereco" class="form-control" placeholder="Ex: Rua da lua, 0 - Curitiba, PR" aria-describedby="helpId">
+                          <small id="helpId" class="text-muted">Endereço completo, contendo cidade e estado</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="diciplina">Diciplina Responsável</label>
+                          <input type="text" required name="diciplina" id="diciplina" class="form-control" placeholder="Ex: Quimica" aria-describedby="helpId">
+                          <small id="helpId" class="text-muted">Diciplina que leciona</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="email">E-mail</label>
+                          <input type="email" required name="email" id="email" class="form-control" placeholder="exemple@exemple.com" aria-describedby="helpId">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <label for="username">Usuario</label>
+                          <input type="text" required name="username" id="username" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Senha</label>
+                          <input type="password" required name="password" id="password" class="form-control" placeholder="xxxxxxxxx" aria-describedby="helpId">
+                        </div>
+                        <br><br>
+                        <button type="submit" class="btn btn-success full-width">CADASTRAR</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer flex content-between">
+                <button type="button" class="btn btn-danger " data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOREACH COM OS REGISTRO DE PROFESSORES -->
+<!-- Modal - Edita Professor -->
+<div class="modal fade" id="edita_professor_{{id}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title">Adicionar Professor</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form action="" method="post" id="form_cadastraProfessor">
+                            <div class="form-group">
+                              <label for="nome">Nome</label>
+                              <input type="text" value="" required name="nome" id="nome" class="form-control" placeholder="Ex: joão da silva" aria-describedby="helpId">
+                              <small id="helpId" class="text-muted">Nome completo.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="cpf">CPF</label>
+                              <input type="text" value="" required name="cpf" id="cpf" class="form-control" placeholder="Ex: xxx.xxx.xxx-xx" aria-describedby="helpId">
+                              <small id="helpId" class="text-muted">CPF sem digítos.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="endereco">Endereço</label>
+                              <input type="text" value="" required name="endereco" id="endereco" class="form-control" placeholder="Ex: Rua da lua, 0 - Curitiba, PR" aria-describedby="helpId">
+                              <small id="helpId" class="text-muted">Endereço completo, contendo cidade e estado</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="diciplina">Diciplina Responsável</label>
+                              <input type="text" value="" required name="diciplina" id="diciplina" class="form-control" placeholder="Ex: Quimica" aria-describedby="helpId">
+                              <small id="helpId" class="text-muted">Diciplina que leciona</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="email">E-mail</label>
+                              <input type="email" value="" required name="email" id="email" class="form-control" placeholder="exemple@exemple.com" aria-describedby="helpId">
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                              <label for="username">Usuario</label>
+                              <input type="text" value="" required readonly name="username" id="username" class="form-control" placeholder="" aria-describedby="helpId">
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Senha</label>
+                              <input type="password" required name="password" id="password" class="form-control" placeholder="xxxxxxxxx" aria-describedby="helpId">
+                            </div>
+                            <br><br>
+                            <button type="submit" class="btn btn-success full-width">CADASTRAR</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer flex content-between">
+                    <button type="button" class="btn btn-danger " data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- Modal - Adicionar Aluno -->
+<div class="modal fade" id="adiciona_aluno" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title">Adicionar Aluno</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" required name="nome" id="nome" class="form-control" placeholder="Ex: joão da silva" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">Nome completo.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" required name="cpf" id="cpf" class="form-control" placeholder="Ex: xxx.xxx.xxx-xx" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">CPF sem digítos.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ra">R.A</label>
+                            <input type="text" required name="ra" id="ra" class="form-control" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" required name="endereco" id="endereco" class="form-control" placeholder="Ex: Rua da lua, 0 - Curitiba, PR" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">Endereço completo, contendo cidade e estado</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="curso">Curso</label>
+                            <input type="text" required name="curso" id="curso" class="form-control" placeholder="Ex: Quimica" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">Curso que participa</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" required name="email" id="email" class="form-control" placeholder="exemple@exemple.com" aria-describedby="helpId">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="username">Usuario</label>
+                            <input type="text" required name="username" id="username" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" required name="password" id="password" class="form-control" placeholder="xxxxxxxxx" aria-describedby="helpId">
+                        </div>
+                        <br><br>
+                        <button type="submit" class="btn btn-success full-width">CADASTRAR</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer flex content-between">
+                <button type="button" class="btn btn-danger " data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOREACH COM OS REGISTRO DE PROFESSORES -->
+<!-- Modal - Edita Professor -->
+<div class="modal fade" id="adiciona_aluno" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Aluno</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" value="" required name="nome" id="nome" class="form-control" placeholder="Ex: joão da silva" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">Nome completo.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" value="" required name="cpf" id="cpf" class="form-control" placeholder="Ex: xxx.xxx.xxx-xx" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">CPF sem digítos.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ra">R.A</label>
+                            <input type="text" value="" required name="ra" id="ra" class="form-control" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" value="" required name="endereco" id="endereco" class="form-control" placeholder="Ex: Rua da lua, 0 - Curitiba, PR" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">Endereço completo, contendo cidade e estado</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="curso">Curso</label>
+                            <input type="text" value="" required name="curso" id="curso" class="form-control" placeholder="Ex: Quimica" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted">Curso que participa</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" value="" required name="email" id="email" class="form-control" placeholder="exemple@exemple.com" aria-describedby="helpId">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="username">Usuario</label>
+                            <input type="text" value="" readonly required name="username" id="username" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" required name="password" id="password" class="form-control" placeholder="xxxxxxxxx" aria-describedby="helpId">
+                        </div>
+                        <br><br>
+                        <button type="submit" class="btn btn-success full-width">CADASTRAR</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer flex content-between">
+                <button type="button" class="btn btn-danger " data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<script>
+
+    window.onload = function() {
+       $('#content_aluno').toggle();
+    };
+    $('#bnt_professor').click(function(){
+        $('#bnt_professor').addClass('silver');
+        $('#bnt_aluno').removeClass('silver');
+
+        $('#content_profesor').toggle();
+        $('#content_aluno').toggle();
+    });
+    $('#bnt_aluno').click(function(){
+        $('#bnt_aluno').addClass('silver');
+        $('#bnt_professor').removeClass('silver');
+
+        $('#content_aluno').toggle();
+        $('#content_profesor').toggle();
+
+    });
+</script>

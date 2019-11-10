@@ -27,3 +27,17 @@
     min-height: 75%;
     height: max-content;
 }
+.fa-plus{
+    color: green;
+    font-size: 30px;
+}
+.adicionar-professor{
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.fa-edit{
+    font-size: 30px;
+}
+table tr{
+    text-align: center;
+ }
