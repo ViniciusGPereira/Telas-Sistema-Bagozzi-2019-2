@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+
+.flex{
+    display: flex;
+}
+.content-center{
+    justify-content: center;
+}
+.content-between{
+    justify-content: space-between;
+}
+.column{
+    flex-direction:column;
+}
+.logo div.col-md-4.offset-md-4{
+    height: 150px;
+}
+.logo div.col-md-4.offset-md-4 img{
+    height: 100%;
+}
+.login-titulo{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.full-width{
+    width: 100%;
+}
