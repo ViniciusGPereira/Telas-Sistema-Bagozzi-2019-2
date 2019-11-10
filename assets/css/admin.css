@@ -41,3 +41,21 @@
 table tr{
     text-align: center;
  }
+.titulo-professor{
+    color: #0056B3;
+}
+.fa-door-open{
+    font-size: 30px;
+    color: black;
+}
+.fa-door-open:hover{
+    color: red;
+}
+.fa-check{
+    font-size: 30px;
+    color: green;
+}
+.fa-ban{
+    font-size: 30px;
+    color: red;
+}

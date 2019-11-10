@@ -19,6 +19,7 @@
     <div class="row menu  flex content-between">
         <div id="logo">
             <img src="../assets/img/faculdade-bagozzi-logo.png">
+            Professor {{Nome}}
         </div>
         <div id="logout">
             <a href="../index.html"><i class="fas fa-door-open"></i></a>
@@ -28,68 +29,82 @@
     <div class="row flex content-center content-panel ">
         <div class="col-md-8 ">
             <div class="row flex">
-                <div class="col-md-2 silver" id="bnt_professor" >
-                    <h3>Professores</h3>
+                <div class="col-md-2 silver" id="bnt_aprovacoes" >
+                    <h3>Aprovações</h3>
                 </div>
-                <div class="col-md-2 " id="bnt_aluno">
-                    <h3>Alunos</h3>
+                <div class="col-md-2 " id="bnt_estoque">
+                    <h3>Estoque</h3>
                 </div>
             </div>
             <div class="row silver">
-                <div class="content-professor full-width" id="content_profesor">
+                <div class="content-professor full-width" id="content_aprovacoes">
                     <div class="superior-professor full-width flex content-between ">
                         <div class="titulo-professor">
-                            <h3>Lista de Professores</h3>
-                        </div>
-                        <div class="adicionar-professor">
-                            <a href="#" data-toggle="modal" data-tooltip="tooltip" title="Adicionar Professor!" data-target="#adiciona_professor"><i class="fas fa-plus"></i></a>
+                            <h3>Aprovações Pendentes</h3>
                         </div>
                     </div>
                     <div class="silver content-table">
                         <table class="table">
                             <thead>
-                                <th>Nome</th>
-                                <th>CPF</th>
+                                <th>Solicitante</th>
+                                <th>R.A</th>
                                 <th>Data</th>
-                                <th>Status</th>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
                                 <th>Opções</th>
                             </thead>
                             <tbody>
                                 <!-- FOREACH COM OS REGISTRO DE PROFESSORES -->
                                 <tr>
                                     <td>Exemplo</td>
-                                    <td>000.000.000.00</td>
+                                    <td>0000000</td>
                                     <td>00/00/0000</td>
-                                    <td>Ativo</td>
-                                    <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Professor!" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    <td>Sabão</td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="" data-tooltip="tooltip" title="Aprovar Registro"><i class="fas fa-check"></i></i></a> 
+                                        <a href="" data-tooltip="tooltip" title="Recusar Registro"><i class="fas fa-ban"></i></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Exemplo</td>
-                                    <td>000.000.000.00</td>
+                                    <td>0000000</td>
                                     <td>00/00/0000</td>
-                                    <td>Ativo</td>
-                                    <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Professor!" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    <td>Sabão</td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="" data-tooltip="tooltip" title="Aprovar Registro"><i class="fas fa-check"></i></i></a> 
+                                        <a href="" data-tooltip="tooltip" title="Recusar Registro"><i class="fas fa-ban"></i></i></a>
+                                    </td>                
                                 </tr>
                                 <tr>
                                     <td>Exemplo</td>
-                                    <td>000.000.000.00</td>
+                                    <td>0000000</td>
                                     <td>00/00/0000</td>
-                                    <td>Ativo</td>
-                                    <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Professor!" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    <td>Sabão</td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="" data-tooltip="tooltip" title="Aprovar Registro"><i class="fas fa-check"></i></i></a> 
+                                        <a href="" data-tooltip="tooltip" title="Recusar Registro"><i class="fas fa-ban"></i></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Exemplo</td>
-                                    <td>000.000.000.00</td>
+                                    <td>0000000</td>
                                     <td>00/00/0000</td>
-                                    <td>Ativo</td>
-                                    <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Professor!" data-target="#edita_professor_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                    <td>Sabão</td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="" data-tooltip="tooltip" title="Aprovar Registro"><i class="fas fa-check"></i></i></a> 
+                                        <a href="" data-tooltip="tooltip" title="Recusar Registro"><i class="fas fa-ban"></i></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="content-aluno full-width" id="content_aluno">
-                    <div class="content-professor full-width" id="content_aluno">
+                <div class="content-aluno full-width" id="content_estoque">
+                    <div class="content-professor full-width" id="content_estoque">
                         <div class="superior-professor full-width flex content-between ">
                             <div class="titulo-professor">
                                 <h3>Lista de Alunos</h3>
@@ -114,28 +129,28 @@
                                         <td>000.000.000.00</td>
                                         <td>00/00/0000</td>
                                         <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
                                     </tr>
                                     <tr>
                                         <td>Exemplo</td>
                                         <td>000.000.000.00</td>
                                         <td>00/00/0000</td>
                                         <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
                                     </tr>
                                     <tr>
                                         <td>Exemplo</td>
                                         <td>000.000.000.00</td>
                                         <td>00/00/0000</td>
                                         <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
                                     </tr>
                                     <tr>
                                         <td>Exemplo</td>
                                         <td>000.000.000.00</td>
                                         <td>00/00/0000</td>
                                         <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-edit"></i></a></td>
+                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -395,22 +410,22 @@
 <script>
 
     window.onload = function() {
-       $('#content_aluno').toggle();
+       $('#content_estoque').toggle();
        $('[data-tooltip="tooltip"]').tooltip();
     };
-    $('#bnt_professor').click(function(){
-        $('#bnt_professor').addClass('silver');
-        $('#bnt_aluno').removeClass('silver');
+    $('#bnt_aprovacoes').click(function(){
+        $('#bnt_aprovacoes').addClass('silver');
+        $('#bnt_estoque').removeClass('silver');
 
-        $('#content_profesor').toggle();
-        $('#content_aluno').toggle();
+        $('#content_aprovacoes').toggle();
+        $('#content_estoque').toggle();
     });
-    $('#bnt_aluno').click(function(){
-        $('#bnt_aluno').addClass('silver');
-        $('#bnt_professor').removeClass('silver');
+    $('#bnt_estoque').click(function(){
+        $('#bnt_estoque').addClass('silver');
+        $('#bnt_aprovacoes').removeClass('silver');
 
-        $('#content_aluno').toggle();
-        $('#content_profesor').toggle();
+        $('#content_estoque').toggle();
+        $('#content_aprovacoes').toggle();
 
     });
 </script>
