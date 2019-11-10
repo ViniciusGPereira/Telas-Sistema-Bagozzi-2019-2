@@ -6,12 +6,91 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
 
     <script src="/assets/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="row menu  flex content-between">
+        <div id="logo">
+            <img src="../assets/img/faculdade-bagozzi-logo.png">
+        </div>
+        <div id="logout">
+            <a href="../index.html">Sair</a>
+        </div>
+    </div>
+    <div class="row space-50 "></div>
+    <div class="row flex content-center content-panel ">
+        <div class="col-md-8 ">
+            <div class="row flex">
+                <div class="col-md-2 silver">
+                    <h3>Professores</h3>
+                </div>
+                <div class="col-md-2 ">
+                    <h3>Alunos</h3>
+                </div>
+            </div>
+            <div class="row silver">
+                <div class="content-professor full-width">
+                    <div class="superior-professor full-width flex content-between ">
+                        <div class="titulo-professor">
+                            <h3>Professores</h3>
+                        </div>
+                        <div class="adicionar-professor">
+                            +
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="content-aluno">
 
+                </div>
+            </div>
+            <div class="row silver content-table">
+                <table class="table">
+                    <thead>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Opções</th>
+                    </thead>
+                    <tbody>
+                        <!-- FOREACH COM RESULTADOS -->
+                        <tr>
+                            <td>Exemplo</td>
+                            <td>000.000.000.00</td>
+                            <td>00/00/0000</td>
+                            <td>Ativo</td>
+                            <td>Editar</td>
+                        </tr>
+                        <tr>
+                            <td>Exemplo</td>
+                            <td>000.000.000.00</td>
+                            <td>00/00/0000</td>
+                            <td>Ativo</td>
+                            <td>Editar</td>
+                        </tr>
+                        <tr>
+                            <td>Exemplo</td>
+                            <td>000.000.000.00</td>
+                            <td>00/00/0000</td>
+                            <td>Ativo</td>
+                            <td>Editar</td>
+                        </tr>
+                        <tr>
+                            <td>Exemplo</td>
+                            <td>000.000.000.00</td>
+                            <td>00/00/0000</td>
+                            <td>Ativo</td>
+                            <td>Editar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

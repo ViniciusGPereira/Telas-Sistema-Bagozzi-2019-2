@@ -1,16 +1,4 @@
-body{
-    margin: 0px;
-    padding: 0px;
-}
-.red{
-    background-color: red;
-}
-.yellow{
-    background-color: yellow;
-}
-.green{
-    background-color: green;
-}
+
 .bloco-login{
     width: 100vw;
     height: 100vh;
@@ -28,18 +16,7 @@ body{
     border-radius: 15px;
     background-image: linear-gradient(to bottom, #C7E1F2 1%, white);
 }
-.flex{
-    display: flex;
-}
-.content-center{
-    justify-content: center;
-}
-.content-between{
-    justify-content: space-between;
-}
-.column{
-    flex-direction:column;
-}
+
 .logo div.col-md-4.offset-md-4{
     height: 150px;
 }
@@ -51,6 +28,4 @@ body{
     text-align: center;
     display: inline-block;
 }
-.full-width{
-    width: 100%;
-}
+

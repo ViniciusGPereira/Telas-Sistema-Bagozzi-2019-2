@@ -1,0 +1,29 @@
+.menu{
+    height: 150px;
+    padding: 25px 50px 0px 50px;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+#logout{
+    margin: 35px 20px 0px 0px;
+}
+.content-panel{
+    min-height: 60vh;
+    height: max-content;
+}
+.space-50{
+    height: 80px;
+}
+.silver{
+    background-color: #f7f7f7;
+}
+.superior-professor{
+    width: 100%;
+    padding: 20px;
+}
+.table{
+    margin-top:25px;
+}
+.content-table{
+    min-height: 75%;
+    height: max-content;
+}
