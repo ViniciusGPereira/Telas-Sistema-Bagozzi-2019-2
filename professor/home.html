@@ -107,50 +107,52 @@
                     <div class="content-professor full-width" id="content_estoque">
                         <div class="superior-professor full-width flex content-between ">
                             <div class="titulo-professor">
-                                <h3>Lista de Alunos</h3>
+                                <h3>Estoque</h3>
                             </div>
-                            <div class="adicionar-professor">
-                                <a href="#" data-toggle="modal" data-tooltip="tooltip" title="Adicionar Aluno"  data-target="#adiciona_aluno"><i class="fas fa-plus"></i></a>
-                            </div>
+                            <div class="adicionar-aluno flex content-between">
+                                <a href="#" data-toggle="modal" data-tooltip="tooltip" title="Adicionar Armazem"  data-target="#adiciona_armazem"><i class="fas fa-database" style="color: cornflowerblue;" ></i></a>
+                                <a href="#" data-toggle="modal" data-tooltip="tooltip" title="Adicionar Produto"  data-target="#adiciona_produto"><i class="fab fa-product-hunt" style="color: cadetblue;"></i></i></a>
+                                <a href="#" data-toggle="modal" data-tooltip="tooltip" title="Adicionar Transação"  data-target="#adiciona_transacao"><i class="fas fa-exchange-alt" ></i></a>
+                            </div> 
                         </div>
                         <div class="silver content-table">
                             <table class="table">
                                 <thead>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Data</th>
-                                    <th>Status</th>
-                                    <th>Opções</th>
+                                    <th>Item</th>
+                                    <th>Armazem</th>
+                                    <th>Quantidade</th>
+                                    <th>Unidade de Medida</th>
+                                    <th>Estoque Minimo</th>
                                 </thead>
                                 <tbody>
                                     <!-- FOREACH COM OS REGISTRO DE PROFESSORES -->
                                     <tr>
-                                        <td>Exemplo</td>
-                                        <td>000.000.000.00</td>
-                                        <td>00/00/0000</td>
-                                        <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
+                                       <td>Suco</td>
+                                       <td>Cozinha</td>
+                                       <td>50</td>
+                                       <td>lts</td>
+                                       <td>25</td>
                                     </tr>
                                     <tr>
-                                        <td>Exemplo</td>
-                                        <td>000.000.000.00</td>
-                                        <td>00/00/0000</td>
-                                        <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
+                                        <td>Suco</td>
+                                        <td>Cozinha</td>
+                                        <td>50</td>
+                                        <td>lts</td>
+                                        <td>25</td>
                                     </tr>
                                     <tr>
-                                        <td>Exemplo</td>
-                                        <td>000.000.000.00</td>
-                                        <td>00/00/0000</td>
-                                        <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
+                                        <td>Suco</td>
+                                        <td>Cozinha</td>
+                                        <td>50</td>
+                                        <td>lts</td>
+                                        <td>25</td>
                                     </tr>
                                     <tr>
-                                        <td>Exemplo</td>
-                                        <td>000.000.000.00</td>
-                                        <td>00/00/0000</td>
-                                        <td>Ativo</td>
-                                        <td><a href="" data-toggle="modal" data-tooltip="tooltip" title="Editar Aluno" data-target="#edita_aluno_{{id}}" ><i class="fas fa-check"></i></i></a></td>
+                                        <td>Suco</td>
+                                        <td>Cozinha</td>
+                                        <td>50</td>
+                                        <td>lts</td>
+                                        <td>25</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -406,6 +408,137 @@
     </div>
 </div>
     
+<!-- Modal  Adicionar Armazem -->
+<div class="modal fade" id="adiciona_armazem" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adiciona Armazem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="">
+                        <div class="form-group">
+                          <label for="armazem">Nome do Armazem</label>
+                          <input type="text" name="armazem" id="armazem" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="localizacao">Localização</label>
+                            <textarea name="localizacao" id="localizacao" class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success full-width">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer flex content-between">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Adicionar Produto -->
+<div class="modal fade" id="adiciona_produto" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title">Adiciona Produto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="">
+                        <div class="form-group">
+                          <label for="produto">Nome Produto</label>
+                          <input type="text" name="produto" id="produto" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="und">U.N.D</label>
+                          <input type="text" name="und" id="und" class="form-control" placeholder="Ex: lts, und, kg" aria-describedby="helpId">
+                          <small id="helpId" class="text-muted">Unidade de Medida</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="estoque_minimo">Estoque Mínimo</label>
+                          <input type="number" step="0.001" name="estoque_minimo" id="estoque_minimo" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <button type="submit" class="btn btn-success full-width">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer flex content-between">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="adiciona_transacao" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title">Adicionar Transacão</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="">
+                        <div class="form-group">
+                          <label for="">Produto</label>
+                          <select name="select_produto" class="form-control"  id="select_produto">
+                              <option value=""></option>
+                              <option value="produto1">produto 1</option>
+                              <option value="produto2">produto 2</option>
+                              <option value="produto3">produto 3</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Armazem</label>
+                            <select name="select_armazem" class="form-control" id="select_armazem">
+                                <option value=""></option>
+                                <option value="armazem1">armazem 1</option>
+                                <option value="armazem2">armazem 2</option>
+                                <option value="armazem3">armazem 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tipo Transação</label>
+                            <select name="select_produto" class="form-control"  id="select_produto">
+                                <option value=""></option>
+                                <option value="entrada">Entrada</option>
+                                <option value="saida">Saida</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="quantidade_transacao">Quantidade</label>
+                          <input type="number" step="0.001" name="quantidade_transacao" class="form-control"  id="quantidade_transacao" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <button type="submit" class="btn btn-success full-width">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer flex content-between">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#exampleModal').on('show.bs.modal', event => {
+        var button = $(event.relatedTarget);
+        var modal = $(this);
+        // Use above variables to manipulate the DOM
+        
+    });
+</script>
 
 <script>
 
